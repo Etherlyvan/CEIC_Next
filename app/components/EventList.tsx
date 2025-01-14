@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import styles from '@/app/styles/EventList.module.css';
+import '@/app/styles/global.css';
 import Image from 'next/image';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
