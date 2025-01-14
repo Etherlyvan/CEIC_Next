@@ -5,7 +5,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Efek parallax */
-    height: 100vh;
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +36,7 @@
   .hero-content {
     position: relative;
     max-width: 1000px;
-    padding: 3rem;
+    padding: 5rem;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
