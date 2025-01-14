@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;  /* Primary font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;  /* Untuk rendering font yang lebih halus */
+  -moz-osx-font-smoothing: grayscale;   /* Untuk rendering font yang lebih halus di Firefox */
+}
+
+/* Tambahkan ini untuk heading (optional) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;  /* Secondary font untuk heading */
+}

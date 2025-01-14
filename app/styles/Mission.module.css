@@ -1,0 +1,231 @@
+.missionContainer {
+    position: relative;
+    padding: 6rem 10rem;
+    background: linear-gradient(135deg, #0B2447 0%, #19376D 100%);
+    color: white;
+    margin-top: -4rem;
+    z-index: 1;
+}
+
+.missionContainer h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #86B6F6, #B4D4FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.missionContainer p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.missionList {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.missionItem {
+    display: flex;
+    width: 100%;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.missionContent {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.leftContent {
+    position: relative;
+    order: 0;
+    padding-left: 3rem;
+    margin-left: auto;
+}
+
+.rightContent {
+    position: relative;
+    order: 1;
+    flex-direction: row-reverse;
+    padding-right: 3rem;
+    margin-right: auto;
+}
+
+.leftContent::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 80%;
+    background: linear-gradient(to bottom, transparent, #86B6F6, transparent);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.rightContent::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 80%;
+    background: linear-gradient(to bottom, transparent, #86B6F6, transparent);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+
+
+.missionContent p {
+    text-align: left;
+    margin: 0;
+}
+
+.imageContainer {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.missionImage {
+    object-fit: contain;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.missionItem:nth-child(1) { animation-delay: 0.1s; }
+.missionItem:nth-child(2) { animation-delay: 0.2s; }
+.missionItem:nth-child(3) { animation-delay: 0.3s; }
+.missionItem:nth-child(4) { animation-delay: 0.4s; }
+.missionItem:nth-child(5) { animation-delay: 0.5s; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .missionContainer {
+        padding: 4rem 2rem;
+        margin-top: -2rem;
+    }
+
+    .missionContainer h1 {
+        font-size: 2.5rem;
+    }
+
+    .missionContent {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .missionContainer {
+        padding: 3rem 1.5rem;
+        margin-top: -1rem;
+    }
+
+    .missionContainer h1 {
+        font-size: 2rem;
+    }
+
+    .missionContainer > p {
+        font-size: 1rem;
+    }
+
+    .missionContent,
+    .leftContent,
+    .rightContent {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        border: none;
+        border-left: 4px solid #86B6F6;
+        padding: 1.5rem;
+    }
+    
+    .leftContent::before,
+    .rightContent::before {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 4px;
+        background: linear-gradient(to right, transparent, #86B6F6, transparent);
+    }
+
+    .leftContent:hover::before,
+    .rightContent:hover::before {
+        width: 90%;
+        height: 4px;
+    }
+
+    .missionContent p,
+    .rightContent p {
+        text-align: center !important;
+        margin: 1rem 0;
+    }
+
+    .imageContainer {
+        width: 60px;
+        height: 60px;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+    .missionContainer {
+        padding: 2rem 1rem;
+    }
+
+    .missionContainer h1 {
+        font-size: 1.75rem;
+    }
+
+    .missionContent,
+    .leftContent,
+    .rightContent {
+        padding: 1rem;
+    }
+
+    .imageContainer {
+        width: 50px;
+        height: 50px;
+    }
+
+    .missionContent p {
+        font-size: 1rem;
+    }
+}

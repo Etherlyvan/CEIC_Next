@@ -1,0 +1,251 @@
+/* app/styles/About.module.css */
+.aboutContainer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem 10rem;
+  background: linear-gradient(135deg, #0B2447, #19376D);
+  color: white;
+  overflow: hidden;
+}
+
+.backgroundPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.1) 1px, transparent 0);
+  background-size: 40px 40px;
+  opacity: 0.3;
+}
+
+.leftSection {
+  flex: 1;
+  padding-right: 4rem;
+  animation: slideInLeft 1s ease-out;
+}
+
+.titleWrapper {
+  margin-bottom: 3rem;
+}
+
+.titleWrapper h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(to right, #fff, #86B6F6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.titleWrapper h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+  color: #86B6F6;
+}
+
+.underline {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, #86B6F6, transparent);
+  margin-top: 1rem;
+}
+
+.logos {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.logoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.logo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.logoWrapper span {
+  font-size: 1rem;
+  color: #86B6F6;
+  font-weight: 500;
+}
+
+.rightSection {
+  flex: 2;
+  animation: slideInRight 1s ease-out;
+}
+
+.contentCard {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 2.5rem;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.contentCard h3 {
+  font-size: 2rem;
+  color: #86B6F6;
+  margin-bottom: 1.5rem;
+}
+
+.highlightBox {
+  background: rgba(25, 55, 109, 0.2);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border-left: 4px solid #19376D;
+}
+
+.highlightBox h4 {
+  color: #86B6F6;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.tagline {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 1.5rem 0;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(25, 55, 109, 0.1);
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-3px);
+  background: rgba(25, 55, 109, 0.2);
+}
+
+.featureIcon {
+  font-size: 1.5rem;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .aboutContainer {
+    flex-direction: column;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .leftSection {
+    padding-right: 0;
+    margin-bottom: 3rem;
+  }
+
+  .underline {
+    margin: 1rem auto;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .titleWrapper h1 {
+    font-size: 3.5rem;
+  }
+
+  .titleWrapper h2 {
+    font-size: 2.5rem;
+  }
+
+  .contentCard {
+    padding: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .feature {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutContainer {
+    padding: 3rem 1rem;
+  }
+
+  .titleWrapper h1 {
+    font-size: 2.5rem;
+  }
+
+  .titleWrapper h2 {
+    font-size: 2rem;
+  }
+
+  .logos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlightBox {
+    padding: 1rem;
+  }
+}
