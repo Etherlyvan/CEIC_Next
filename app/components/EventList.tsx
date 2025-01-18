@@ -17,52 +17,52 @@ const EventList = () => {
   const [selectedEvent, setSelectedEvent] = useState<EventKey | null>(null);
 
   const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        pauseOnHover: true,
-        fade: true, // Menambahkan efek fade
-        cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
-        beforeChange: (current: number, next: number) => {
-            // Tambahkan class untuk slide yang akan keluar
-            const currentSlide = document.querySelector(`.slick-slide[data-index="${current}"]`);
-            currentSlide?.classList.add('sliding-out');
-    
-            // Tambahkan class untuk slide yang akan masuk
-            const nextSlide = document.querySelector(`.slick-slide[data-index="${next}"]`);
-            nextSlide?.classList.add('sliding-in');
-    
-            // Hapus class setelah animasi selesai
-            setTimeout(() => {
-                currentSlide?.classList.remove('sliding-out');
-                nextSlide?.classList.remove('sliding-in');
-            }, 500);
-        },
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: true,
-                    arrows: false
-                }
-            }
-        ]
-    };
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    fade: true, // Menambahkan efek fade
+    cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+    beforeChange: (current: number, next: number) => {
+      // Tambahkan class untuk slide yang akan keluar
+      const currentSlide = document.querySelector(`.slick-slide[data-index="${current}"]`);
+      currentSlide?.classList.add('sliding-out');
+
+      // Tambahkan class untuk slide yang akan masuk
+      const nextSlide = document.querySelector(`.slick-slide[data-index="${next}"]`);
+      nextSlide?.classList.add('sliding-in');
+
+      // Hapus class setelah animasi selesai
+      setTimeout(() => {
+        currentSlide?.classList.remove('sliding-out');
+        nextSlide?.classList.remove('sliding-in');
+      }, 500);
+    },
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          arrows: false
+        }
+      }
+    ]
+  };
 
   const handleLearnMoreClick = (eventTitle: EventKey) => {
     setSelectedEvent(eventTitle);
@@ -78,7 +78,7 @@ const EventList = () => {
     <div className={styles.eventListContainer}>
       <h2>Upcoming Events</h2>
       <p className={styles.subtitle}>Discover our exciting events lineup for 2025</p>
-      
+
       <Slider {...settings}>
         {events.map((event, index) => (
           <div key={index} className={styles.slideWrapper}>
@@ -119,57 +119,75 @@ const EventList = () => {
               </div>
               <div className={styles.eventImage}>
                 <div className={styles.imageOverlay} />
-                    <Image 
-                        src={event.image} 
-                        alt={event.title} 
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        style={{
-                        objectFit: 'cover',
-                        objectPosition: 'center'
-                        }}
-                        priority
-                    />
-                </div>
+                <Image 
+                  src={event.image} 
+                  alt={event.title} 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{
+                    objectFit: 'cover',
+                    objectPosition: 'center'
+                  }}
+                  priority
+                />
+              </div>
             </div>
           </div>
         ))}
       </Slider>
-
       {showPopup && selectedEvent && (
         <div className={styles.popup}>
             <div className={styles.popupContent}>
-            <h3>{selectedEvent}</h3>
-            <p><strong>Tema:</strong> {eventDetails[selectedEvent].tema}</p>
-            <p><strong>Tentang:</strong> {eventDetails[selectedEvent].tentang}</p>
-            {eventDetails[selectedEvent].reward && (
-                <div className={styles.rewardSection}>
-                <h4>Reward</h4>
-                <div className={styles.rewardList}>
-                    {eventDetails[selectedEvent].reward.split('\n').map((reward, index) => {
-                    const [title, amount] = reward.split(':');
-                    return (
-                        <div key={index} className={styles.rewardItem}>
-                        <span className={styles.rewardTitle}>{title}</span>
-                        <span className={styles.rewardAmount}>{amount}</span>
+                <button className={styles.closeButton} onClick={closePopup}>
+                    <span style={{ marginBottom: '2px' }}>×</span>
+                </button>
+                <h2 className={styles.popupTitle}>{selectedEvent}</h2>
+                <div className={styles.popupImage}>
+                    <Image 
+                        src={eventDetails[selectedEvent].image} 
+                        alt={selectedEvent} 
+                        width={500} 
+                        height={300} 
+                        style={{
+                            objectFit: 'cover',
+                            borderRadius: '10px',
+                            marginBottom: '1rem'
+                        }}
+                    />
+                </div>
+                <div className={styles.popupTextContent}>
+                    <p><strong>Tema:</strong> {eventDetails[selectedEvent].tema}</p>
+                    <p><strong>Tentang:</strong> {eventDetails[selectedEvent].tentang}</p>
+                    {eventDetails[selectedEvent].reward && (
+                        <div className={styles.rewardSection}>
+                            <h4>Reward</h4>
+                            <div className={styles.rewardList}>
+                                {eventDetails[selectedEvent].reward.split('\n').map((reward, index) => {
+                                    const [title, amount] = reward.split(':');
+                                    return (
+                                        <div key={index} className={styles.rewardItem}>
+                                            <span className={styles.rewardTitle}>{title}</span>
+                                            <span className={styles.rewardAmount}>{amount}</span>
+                                        </div>
+                                    );
+                                })}
+                            </div>
                         </div>
-                    );
-                    })}
+                    )}
                 </div>
+                <div className={styles.registerButtonContainer}>
+                    <a 
+                        href="https://example.com/register"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className={styles.registerButton}
+                    >
+                        Register Now
+                    </a>
                 </div>
-            )}
-            <button onClick={closePopup}>Close</button>
-            <a 
-                href="https://example.com/register"
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={styles.registerButton}
-            >
-                Register Now
-            </a>
             </div>
         </div>
-        )}
+    )}
     </div>
   );
 };

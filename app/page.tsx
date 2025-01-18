@@ -5,15 +5,16 @@ import Mission from './components/Mission';
 import EventList from './components/EventList';
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
+    <main>
+      
       <Hero />
-      <section id="about" className="py-16">
+      <section id="about" >
         <About />
       </section>
-      <section id="mission" className="py-16">
+      <section id="mission" >
         <Mission />
       </section>
-      <section id="events" className="py-16">
+      <section id="events" >
         <EventList />
       </section>
     </main>

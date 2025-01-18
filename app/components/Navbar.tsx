@@ -60,6 +60,7 @@ export default function Navbar() {
       <div 
         className={`hamburger ${isMenuOpen ? 'active' : ''}`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label="Toggle menu"
       >
         <span></span>
         <span></span>

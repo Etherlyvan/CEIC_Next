@@ -2,22 +2,30 @@ export const eventDetails = {
     "IBDC (International Bridge Design Contest)": {
       tema: "Smart Bridges and Disaster Resilience Using BIM Technology Innovation to Achieve Sustainable Development Goals",
       tentang: "Infrastruktur jembatan sangat penting untuk meningkatkan aksesibilitas, konektivitas, serta mendorong pertumbuhan ekonomi. Seiring meningkatnya permintaan dan tantangan dalam konstruksi jembatan, solusi inovatif menjadi kunci untuk mengatasi hambatan tersebut. Kemajuan teknologi menawarkan jalan menuju pembangunan jembatan yang efisien, inovatif, dan berkelanjutan. International Bridge Design Contest (IBDC) memberikan kesempatan untuk mengasah keterampilan peserta dalam merancang jembatan yang tidak hanya cerdas tetapi juga tangguh terhadap bencana serta sejalan dengan prinsip pembangunan berkelanjutan.",
-      reward: "Juara 1: Rp 9.000.000,00\nJuara 2: Rp 6.000.000,00\nJuara 3: Rp 4.000.000,00\nHarapan 1: Rp 2.000.000,00\nHarapan 2: Rp 1.500.000,00"
+      reward: "Juara 1: Rp 9.000.000,00\nJuara 2: Rp 6.000.000,00\nJuara 3: Rp 4.000.000,00\nHarapan 1: Rp 2.000.000,00\nHarapan 2: Rp 1.500.000,00",
+      pendaftaran: "https://example.com/register",
+      image: "/vercel.svg"
     },
     "IDIC (International Dam Innovation Contest)": {
       tema: "Smart and Sustainable Dam Construction by Leveraging Digitalization to Optimize Operations and Maintenance in Support of the SDGs",
       tentang: "Seiring dengan meningkatnya tantangan lingkungan global, kebutuhan akan solusi inovatif dan berkelanjutan menjadi semakin penting. International Dam Innovation Contest (IDIC) mengajak mahasiswa untuk menciptakan ide-ide yang mengubah cara pandang terhadap teknik sipil dalam bidang bangunan air, khususnya bendungan. Kompetisi ini meliputi inovasi dalam desain bendungan yang efisien, teknologi digital pengelolaan air yang maju, material ramah lingkungan, serta solusi untuk mitigasi banjir dan pemanfaatan sumber daya air secara optimal. Tujuan utamanya adalah menciptakan infrastruktur yang tangguh dan berkelanjutan untuk masa depan.",
-      reward: "Juara 1: Rp 9.000.000,00\nJuara 2: Rp 6.000.000,00\nJuara 3: Rp 4.000.000,00\nHarapan 1: Rp 2.000.000,00\nHarapan 2: Rp 1.500.000,00"
+      reward: "Juara 1: Rp 9.000.000,00\nJuara 2: Rp 6.000.000,00\nJuara 3: Rp 4.000.000,00\nHarapan 1: Rp 2.000.000,00\nHarapan 2: Rp 1.500.000,00",
+      pendaftaran: "https://example.com/register",
+      image: "/vercel.svg"
     },
     "IBIC (International BIM Innovation Contest)": {
       tema: "Optimizing BIM to Achieve Sustainable Development Goals: Integrating Technology for Collaborative Green Building and Resilient Infrastructure",
       tentang: "Salah satu tantangan penting dalam mencapai tujuan Pembangunan Berkelanjutan (SDGs) adalah mewujudkan infrastruktur yang tidak hanya memenuhi kebutuhan saat ini, tetapi juga berkelanjutan di masa depan. Pemanfaatan teknologi Building Information Modeling (BIM) memungkinkan perencanaan, desain, dan pelaksanaan proyek infrastruktur secara lebih efisien, efektif, dan berkelanjutan. Dengan melihat peluang tersebut International BIM Innovation Contest Civil Engineering Innovation Contest (IBIC) hadir sebagai langkah memberikan wawasan dan meningkatkan kompetensi BIM mahasiswa dalam menghadapi tantangan – tantangan yang akan datang dalam menguatkan ketahanan infrastruktur yang berkelanjutan.",
-      reward: "Juara 1: Rp 9.000.000,00\nJuara 2: Rp 6.000.000,00\nJuara 3: Rp 4.000.000,00\nHarapan 1: Rp 2.000.000,00\nHarapan 2: Rp 1.500.000,00"
+      reward: "Juara 1: Rp 9.000.000,00\nJuara 2: Rp 6.000.000,00\nJuara 3: Rp 4.000.000,00\nHarapan 1: Rp 2.000.000,00\nHarapan 2: Rp 1.500.000,00",
+      pendaftaran: "https://example.com/register",
+      image: "/vercel.svg"
     },
     "IPIC (International Paper Innovation Contest)": {
       tema: "Engineering Beyond Boundaries: Innovative Solutions for Tomorrow’s Infrastructure Challenges",
       tentang: "Ketika infrastruktur global menghadapi tantangan yang terus berkembang, kebutuhan akan solusi yang berani dan berkelanjutan semakin besar. International Paper Innovation Contest (IPIC) mengundang inovator masa depan untuk mempresentasikan ide-ide yang mendefinisikan kembali teknik sipil, termasuk sistem pintar berbasis IoT, material berkelanjutan, mobilitas ramah lingkungan, terobosan pengelolaan air, dan teknologi dasar yang canggih, semuanya berkontribusi terhadap kota-kota masa depan.",
-      reward: "Juara 1: Rp 5.000.000,00\nJuara 2: Rp 4.000.000,00\nJuara 3: Rp 3.000.000,00\nHarapan 1: Rp 1.500.000,00\nHarapan 2: Rp 1.000.000,00"
+      reward: "Juara 1: Rp 5.000.000,00\nJuara 2: Rp 4.000.000,00\nJuara 3: Rp 3.000.000,00\nHarapan 1: Rp 1.500.000,00\nHarapan 2: Rp 1.000.000,00",
+      pendaftaran: "https://example.com/register",
+      image: "/vercel.svg"
     },
     "Seminar Nasional": {
       tema: "Orchestrating the Future: Reshaping Infrastructure Through SDGs Based and Tech-Driven Innovations",
@@ -25,7 +33,9 @@ export const eventDetails = {
       sasaran: "Khalayak umum seluruh Indonesia",
       tempat: "Gedung Prof. Soedarto/Muladi Dome Universitas Diponegoro",
       tanggal: "17 Mei 2025",
-      reward: "" // No reward specified
+      reward: "" ,
+      pendaftaran: "https://example.com/register",
+      image: "/vercel.svg"
     },
     "Company Expo": {
       tema: "Integrating technology with strategies for SDGs-based infrastructure resilience",
@@ -33,7 +43,9 @@ export const eventDetails = {
       sasaran: "Khalayak umum seluruh Indonesia",
       tempat: "Gedung Prof. Soedarto/Muladi Dome Universitas Diponegoro",
       tanggal: "17 Mei 2025",
-      reward: "" // No reward specified
+      reward: "" ,
+      pendaftaran: "https://example.com/register",
+      image: "/vercel.svg"
     },
     "BIM Workshop": {
       tema: "Integrating BIM Technology to Achieve SDGs-Based Infrastructure Resilience",
@@ -41,7 +53,9 @@ export const eventDetails = {
       sasaran: "Khalayak umum seluruh Indonesia",
       tempat: "Kampus Teknik Sipil Universitas Diponegoro dan Zoom Meeting",
       tanggal: "22-23 Februari 2025",
-      reward: "" // No reward specified
+      reward: "" ,
+      pendaftaran: "https://example.com/register",
+      image: "/vercel.svg"
     }
   };
   

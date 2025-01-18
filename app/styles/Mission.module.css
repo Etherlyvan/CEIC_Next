@@ -164,17 +164,23 @@
         font-size: 1rem;
     }
 
-    .missionContent,
-    .leftContent,
-    .rightContent {
+    .missionContent {
         width: 100%;
-        flex-direction: column;
+        flex-direction: column; /* Ubah arah flex menjadi kolom */
         text-align: center;
         border: none;
-        border-left: 4px solid #86B6F6;
         padding: 1.5rem;
     }
-    
+
+    .leftContent,
+    .rightContent {
+        order: 2;
+        display: flex;
+        justify-content: center; 
+        width: 100%;
+        box-sizing: border-box;
+
+    }
     .leftContent::before,
     .rightContent::before {
         top: 0;
@@ -185,14 +191,8 @@
         background: linear-gradient(to right, transparent, #86B6F6, transparent);
     }
 
-    .leftContent:hover::before,
-    .rightContent:hover::before {
-        width: 90%;
-        height: 4px;
-    }
-
-    .missionContent p,
-    .rightContent p {
+    .missionContent p {
+        order: 1; /* Pastikan teks berada di atas gambar */
         text-align: center !important;
         margin: 1rem 0;
     }
@@ -201,9 +201,8 @@
         width: 60px;
         height: 60px;
     }
-
-
 }
+
 
 @media (max-width: 480px) {
     .missionContainer {

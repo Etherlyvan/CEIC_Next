@@ -2,9 +2,9 @@
 
 body {
   font-family: 'Plus Jakarta Sans', sans-serif;  /* Primary font */
+  width: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;  /* Untuk rendering font yang lebih halus */
   -moz-osx-font-smoothing: grayscale;   /* Untuk rendering font yang lebih halus di Firefox */
 }
